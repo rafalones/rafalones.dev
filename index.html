@@ -1,28 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Exemplo de Fundo com Gradiente Animado</title>
-  <style>
-    body {
-      background: radial-gradient(circle, #000000, #00ff00, #006400, );
-      background-size: 200% auto;
-      animation: gradientAnimation 3s ease infinite;
+  <title>RRR</title>
+<style>
+    .gradient {
+      background: #7f30cf;
+      background: -webkit-repeating-radial-gradient(
+        circle farthest-corner at center center,
+        #7f30cf 0%,
+        #4dc6cf 100%
+      );
+      background: -moz-repeating-radial-gradient(
+        circle farthest-corner at center center,
+        #7f30cf 0%,
+        #4dc6cf 100%
+      );
+      background: repeating-radial-gradient(
+        circle farthest-corner at center center,
+        #7f30cf 0%,
+        #4dc6cf 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    @keyframes gradientAnimation {
+    .centered-wrapper {
+      position: relative;
+      text-align: center;
+    }
+    .centered-wrapper:before {
+      content: "";
+      position: relative;
+      display: inline-block;
+      width: 0;
+      height: 98.5%;
+      vertical-align: middle;
+    }
+    .centered-content {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 200% 200%;
+      animation: gradient 10s ease infinite;
+    }
+
+    @keyframes gradient {
       0% {
-        background-position: 0% center;
+        background-position: 0% 50%;
       }
       50% {
-        background-position: 100% center;
+        background-position: 100% 50%;
       }
       100% {
-        background-position: 0% center;
+        background-position: 0% 50%;
       }
+    }
+    #footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1.5rem; /* Footer height */
     }
   </style>
 </head>
 <body>
   <!-- Conteúdo do seu site aqui -->
+  
 </body>
 </html>
