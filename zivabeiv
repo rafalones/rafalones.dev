@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(-45deg, red, black, gray, orange);
+      background-size: 400% 400%;
+      animation: gradient-animation 10s ease infinite;
+    }
+
+    @keyframes gradient-animation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .neon-text {
+      font-size: 60px;
+      color: black;
+      text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #ffee00, 0 0 50px #bfec43, 0 0 60px #009900, 0 0 70px #026802;
+      animation: neon-glow 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes neon-glow {
+      0% {
+        text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 50px #00FF00, 0 0 60px #00FF00, 0 0 70px #00FF00;
+      }
+      100% {
+        text-shadow: 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 50px #00FF00, 0 0 60px #00FF00, 0 0 70px #00FF00, 0 0 80px #00FF00;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="neon-text">R R R</h1>
+</body>
+</html>
