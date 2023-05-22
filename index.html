@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>R R R</title>
-  <link rel="icon" href="https://i.imgur.com/R88tx8B.png" type="image/png">
+    <link rel="icon" href="https://i.imgur.com/R88tx8B.png" type="image/png">
     <style>
         body {
             margin: 0;
@@ -30,6 +30,19 @@
             text-align: center;
             text-transform: uppercase;
             text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.3;
+            }
         }
 
         footer {
