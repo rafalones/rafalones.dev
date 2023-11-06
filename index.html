@@ -75,6 +75,14 @@
             color: inherit;
             text-decoration: none;
         }
+
+        /* Media query para telas menores (por exemplo, largura máxima de 768px) */
+        @media (max-width: 768px) {
+            .neon-text img {
+                width: 100px; /* Ajuste o tamanho para telas menores */
+                top: 60%; /* Ajuste a posição vertical para telas menores */
+            }
+        }
     </style>
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
