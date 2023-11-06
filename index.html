@@ -76,10 +76,16 @@
             text-decoration: none;
         }
 
-        /* Media query para telas menores (por exemplo, largura máxima de 768px) */
+        /* Modificações para dispositivos móveis */
         @media (max-width: 768px) {
-            .neon-text img {
-                width: 100px; /* Ajuste o tamanho para telas menores */
+            #myVideo {
+                width: 100%; /* Ajuste o tamanho do vídeo para preencher a largura da tela */
+                height: auto; /* Ajuste a altura automaticamente de acordo com a largura */
+                top: 0;
+                bottom: 0;
+            }
+
+            .neon-text {
                 top: 60%; /* Ajuste a posição vertical para telas menores */
             }
         }
