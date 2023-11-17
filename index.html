@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R R R</title>
     <link rel="icon" href="https://i.imgur.com/R88tx8B.png" type="image/png">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         body {
             margin: 0;
             overflow: hidden;
         }
-        
+
         #myVideo {
             position: fixed;
             top: 0;
@@ -19,7 +21,21 @@
             object-fit: cover;
             filter: grayscale(100%);
         }
-        
+
+        .neon-text-custom {
+            position: absolute;
+            top: 60%; 
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+            pointer-events: none; 
+        }
+
         .neon-text {
             position: absolute;
             top: 90%;
@@ -44,6 +60,30 @@
             100% {
                 opacity: 0.3;
             }
+        }
+
+        #interactive-content {
+            position: absolute;
+            top: 70%; 
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+
+        #interactive-content img {
+            width: 200px; 
+            height: 200px; 
+        }
+
+        #myVideoOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            z-index: 3;
         }
 
         footer {
@@ -76,9 +116,22 @@
         <img src="https://i.imgur.com/WmacSms.png" alt="R" class="animate__animated animate__bounce animate__heartBeat">
     </div>
 
+    <div id="interactive-content" onclick="mostrarMensagem()">
+        <img src="https://i.imgur.com/DWedKWS.png" alt="Não Clique">
+        <p class="neon-text-custom">Não Clique</p>
+    </div>
+
+    <div id="myVideoOverlay"></div>
+
     <footer>
         Contact me:
         <a href="mailto:rrr@rafalones.dev">rrr@rafalones.dev</a>
     </footer>
+
+    <script>
+        function mostrarMensagem() {
+            alert('Isso lhe custou caro, ja sei tudo sobre voce!');
+        }
+    </script>
 </body>
 </html>
